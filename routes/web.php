@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TugasController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\MhsController;
+use App\Http\Controllers\matkulController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,3 +69,10 @@ Route::get('/updatemahasiswabaru/{id}', [TugasController::class, 'updatemahasisw
 
 // Route untuk mendapatkan semua mahasiswa dari dosen dengan id tertentu
 Route::get('/carisemuamhs/{id}', [TugasController::class, 'getAllMhsFromDosenItu']);
+
+
+
+// ---TUGAS COURSE 4---
+
+// Route resource mata kuliah
+Route::resource('/matkul', MatkulController::class);

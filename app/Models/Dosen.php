@@ -15,4 +15,7 @@ class Dosen extends Model
     public function mahasiswa(){
         return $this->hasMany(Mahasiswa::class, 'dosen_id');
     }
+    public function mata_kuliah(){
+        return $this->belongsToMany(Matkul::class, 'dosen_matkul', 'dosen_id', 'mata_kuliah_id');
+    }
 }

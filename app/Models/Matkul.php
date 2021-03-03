@@ -22,4 +22,8 @@ class Matkul extends Model
     public function Mahasiswa(){
         return $this->belongsToMany(Mahasiswa::class, 'mahasiswa_matkul', 'mata_kuliah_id', 'mahasiswa_id');
     }
+
+    public function dosen(){
+        return $this->belongsToMany(Dosen::class, 'dosen_matkul', 'mata_kuliah_id', 'dosen_id');
+    }
 }
